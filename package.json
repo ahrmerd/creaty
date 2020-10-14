@@ -28,6 +28,13 @@
   "homepage": "https://github.com/trikss/creaty#readme",
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
-    "sass": "^1.27.0"
+    "sass": "^1.27.0",
+    "tailwindcss": "^1.9.2"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "alpinejs": "^2.7.0",
+    "aos": "^2.3.4"
   }
 }
