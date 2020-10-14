@@ -4,7 +4,9 @@
   "description": "\"simple html, sass, tailwindcss, pwa, scaffold bundled with parcel\"",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel main.js",
+    "build": "parcel build main.js"
   },
   "repository": {
     "type": "git",
@@ -23,5 +25,9 @@
   "bugs": {
     "url": "https://github.com/trikss/creaty/issues"
   },
-  "homepage": "https://github.com/trikss/creaty#readme"
+  "homepage": "https://github.com/trikss/creaty#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.27.0"
+  }
 }
