@@ -1,0 +1,27 @@
+{
+  "name": "creaty",
+  "version": "0.1.0",
+  "description": "\"simple html, sass, tailwindcss, pwa, scaffold bundled with parcel\"",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trikss/creaty.git"
+  },
+  "keywords": [
+    "scaffold",
+    "html",
+    "css",
+    "sass",
+    "tailwindcss",
+    "pwa"
+  ],
+  "author": "trikss",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/trikss/creaty/issues"
+  },
+  "homepage": "https://github.com/trikss/creaty#readme"
+}
