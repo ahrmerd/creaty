@@ -1,5 +1,8 @@
-$color:red;
+@import './colors';
+@import './themes/theme-dark';
+@import './themes/theme-light';
 
-*{
-    color: red;
+
+body{
+    background-color: var(--bg);
 }
