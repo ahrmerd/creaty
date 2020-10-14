@@ -1,0 +1,20 @@
+
+.theme-light{
+    --bg: #{$bg-light};
+    --nav-primary : #{$primary};
+    --nav-btn : #{$primary-dark};
+    --nav-btn-hover: #{$primary-darker} ;
+    --text-primary: #{$text-light};
+    --btn-hover: #{$primary-dark};
+    --text-secondary: #{$secondary};
+    --primary: #{$primary};
+    --secondary: #{$secondary};
+    --tertiary: #{$tertiary} ;
+    --complimentary: #{$complimentary} ;
+    --hover: #{$primary-lighter};
+    --form: #{$primary-lightest} ;
+    --focus: #{$primary-light};
+    --link-hover: #{$primary-dark};
+    transition: all 1000ms ease-in-out, color 1000ms ease-in-out;
+
+ }
