@@ -1,0 +1,162 @@
+// @import '~@fortawesome/fontawesome-free/scss/solid';
+@mixin fontawesome {
+    font-family: 'Font Awesome 5 Free';
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-variant: normal;
+    font-style: normal;
+    text-rendering: auto;
+    font-weight: 900;
+}
+
+@mixin alert-mixin($color) {
+    background-color: lighten($color, 40);
+    // background-color: white;
+    border: 1px solid darken($color, 20);
+    border-left: 6px solid;
+    color: $color;
+    box-shadow: 3px 3px 4px 0 darken($color, 20);
+}
+
+.invalid-feedback {
+    font-size: 80%;
+    color: red;
+    font-style: italic;
+}
+
+.success-feedback {
+    font-size: 80%;
+    color: green;
+    font-style: italic;
+}
+
+.info-feedback {
+    font-size: 80%;
+    color: blue;
+    font-style: italic;
+}
+
+.is-invalid {
+    border-color: red;
+    padding-right: calc(1.6em + 0.75rem);
+}
+
+.alert {
+    margin-top: 0.25rem;
+    width: 100%;
+    margin: 0.25rem 0.5rem;
+    font-size: .9rem;
+    letter-spacing: 0.2px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 0.5rem .5rem;
+    border-radius: 0.25em;
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    text-transform: capitalize;
+
+    @media screen and (min-width: 768px) {
+        & {
+            width: 50%;
+            letter-spacing: 0.4px;
+            font-size: 1.125rem;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        & {
+            letter-spacing: 0.6px;
+            font-size: 1.25rem;
+            width: 35%;
+        }
+    }
+
+    &-danger {
+        @include alert-mixin(red);
+
+        >::before {
+            @include fontawesome();
+            content: "\f06a";
+            margin-right: 1rem;
+        }
+    }
+
+    &-success {
+        @include alert-mixin(green);
+
+        >::before {
+            @include fontawesome();
+            content: "\f058";
+            margin-right: 1rem;
+        }
+
+    }
+
+    &-warning {
+        @include alert-mixin(orange);
+
+        >::before {
+            @include fontawesome();
+            content: "\f06a";
+            margin-right: 1rem;
+        }
+
+    }
+
+    &-info {
+        @include alert-mixin(blue);
+
+        >::before {
+            @include fontawesome();
+            content: "\f05a";
+            margin-right: 1rem;
+        }
+
+    }
+}
+
+.alert-detailed {
+    background-color: lighten($color: red, $amount: 40);
+    position: relative;
+    color: red;
+    border: 1px solid;
+
+    &-title {
+        font-size: 1.25rem;
+        text-transform: capitalize;
+        display: inline-block;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+        margin-left: 2.5rem;
+        padding: .25rem;
+        margin-bottom: .25rem;
+        border-bottom: .7px solid gray;
+
+        &::before {
+    font-family: 'Font Awesome 5 Free';
+            padding: .2rem;
+            box-sizing: border-box;
+            color: white;
+            content: "\f06a";
+            position: absolute;
+            display: inline-block;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2rem;
+            background-color: red;
+        }
+    }
+
+    &-description {
+        color: black;
+        position: relative;
+        display: block;
+        margin-left: 2.5rem;
+        font-size: 15px;
+        padding: .25rem;
+
+    }
+}
