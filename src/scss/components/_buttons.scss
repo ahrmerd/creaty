@@ -9,6 +9,7 @@
   color: white;
   position: relative;
   transition: all 0.3s ease-in;
+
   &:focus {
     outline: none;
     box-shadow: 0 0 0 3px rgba(118, 169, 250, 0.45);
@@ -21,6 +22,7 @@
   color: if($input-color, white, $primary);
   font-weight: bolder;
   border: 1px solid $color;
+
   &:hover {
     background-color: darken($color, 10);
     box-shadow: 0 0 5px 3px $color;
@@ -34,6 +36,7 @@
   color: if($input-color, white, $primary);
   border: 1px solid $color;
   box-shadow: -3px 3px 2px darken($color, 15);
+
   &:hover {
     border: none;
     background-color: darken($color, 15);
@@ -44,22 +47,32 @@
 .btn {
   @include button;
   border-radius: 0.25rem;
+
   &-pill {
     @include button;
     border-radius: 9999px;
   }
+
   &-outline {
     @include normal-button(false);
   }
+
   &-primary {
     @include normal-button($primary);
   }
+
   &-info {
     @include normal-button(blue);
   }
+
   &-success {
     @include normal-button(green);
   }
+
+  &-warning {
+    @include normal-button(orange);
+  }
+
   &-danger {
     @include normal-button(red);
   }
@@ -76,15 +89,12 @@
     left: -1.5px;
   }
 
-  &-primary {
-    @include button-3d($primary);
-  }
-  &-outline{
+  &-outline {
     @include button-3d(false);
   }
 
-  &-danger {
-    @include button-3d(red);
+  &-primary {
+    @include button-3d($primary);
   }
 
   &-info {
@@ -93,6 +103,14 @@
 
   &-success {
     @include button-3d(green);
+  }
+
+  &-warning {
+    @include button-3d(orange);
+  }
+
+  &-danger {
+    @include button-3d(red);
   }
 }
 
@@ -104,7 +122,7 @@
   letter-spacing: 0.1em;
   font-weight: bold;
   font-family: cursive;
-  border: 1px solid darken($color , 20);
+  border: 1px solid darken($color, 20);
 
   &:hover {
     padding-left: 1rem;
@@ -115,6 +133,7 @@
       opacity: 1;
     }
   }
+
   &::after {
     content: ">>";
     font-size: 7px;
@@ -130,23 +149,10 @@
   }
 }
 
-.btn-animated-primary{
-    @include btn-animated($primary);
+.btn-animated-primary {
+  @include btn-animated($primary);
 }
-.btn-animated-secondary{
-    @include btn-animated($secondary);
-}
-// .btn-animated{
-//     @apply relative text-white capitalize bg-teal-500 inline-block px-10 py-4 text-2xl tracking-widest font-bold border border-solid border-teal-800
-// }
-// .btn-animated::after{
-//     content: ">>";
-//     @apply font-normal text-lg tracking-normal absolute top-1/3 opacity-0 right-2 transition-all ease-in duration-300
-// }
 
-// .btn-animated:hover{
-//     @apply pl-4 pr-16
-// }
-// .btn-animated:hover::after{
-//     @apply right-4 opacity-100
-// }
+.btn-animated-secondary {
+  @include btn-animated($secondary);
+}
