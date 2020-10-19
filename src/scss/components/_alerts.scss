@@ -117,8 +117,10 @@
     }
 }
 
-.alert-detailed {
+.alert-long {
+    margin: auto;
     background-color: lighten($color: red, $amount: 40);
+    width: 90%;
     position: relative;
     color: red;
     border: 1px solid;
