@@ -1,0 +1,51 @@
+.cool-header{
+    background-color: $primary;
+    font-size: 1.5rem ;
+    color: white ;
+    width: 90%;
+    text-transform: capitalize;
+    border-radius: 0.25rem ;
+    border-width: 1px;
+    text-align: center;
+    padding: 0.75rem;
+    margin: 0.75rem auto;
+    display: block;
+}
+
+.header{
+    font-size: 1.5rem;
+    text-align: center;
+    text-transform: capitalize;
+    display: block;
+}
+
+.cool-header-2{
+    color: white;
+    width: auto;
+    padding: 0.5rem 2rem;
+    text-align: center;
+    background-color: $primary;
+    display: inline-block;
+    font-size: 2.25rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #e7eef1, 3px 3px 2px rgba(0, 0, 0, 0.4);
+    box-shadow: 2px 2px 2px #e7eef1, 3px 3px 2px rgba(0, 0, 0, 0.4);
+    margin: 0.75rem auto;
+}
+.hero-title{
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    @media screen and (min-width: 768px){
+        &{
+            font-size: 2rem;
+        }
+    }
+}
+.hero-description{
+    font-size: 1.25rem;
+    @media screen and (min-width: 768px){
+        &{
+            font-size: 2rem;
+        }
+    }
+}
