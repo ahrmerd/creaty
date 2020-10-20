@@ -12,7 +12,19 @@
     display: block;
 }
 
-.header{
+.header-1{
+    font-size: 3.5rem;
+    text-align: center;
+    text-transform: capitalize;
+    display: block;
+}
+.header-2{
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: capitalize;
+    display: block;
+}
+.header-3{
     font-size: 1.5rem;
     text-align: center;
     text-transform: capitalize;
@@ -33,7 +45,7 @@
     margin: 0.75rem auto;
 }
 .hero-title{
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-transform: capitalize;
     @media screen and (min-width: 768px){
         &{
