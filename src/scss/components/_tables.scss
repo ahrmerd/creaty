@@ -99,7 +99,7 @@
 .table-box table td,
 .table-box table th{
     padding: 12px 15px;
-    border: 1px solid rgb(255, 0, 0);
+    border: 1px solid $primary-darker;
     text-align: center;
     font-size: 16px;
     background: #ddd;
@@ -108,8 +108,8 @@
 }
 
 .table-box table td:hover{
-    border: 1px solid rgb(255, 0, 0);
-    background: rgb(255, 0, 0);
+    border: 1px solid $primary-darker;
+    background: $primary;
     font-weight: bold;
     color: white;
 }
