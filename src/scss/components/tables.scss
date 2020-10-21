@@ -1,0 +1,120 @@
+@mixin table-cell(){
+    padding: 17px 15px;
+    border: 1px solid gray;
+    text-align: center;
+    font-size: 16px;
+}
+.table-responsive{
+    margin: auto;
+    width: 90%;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    & td{
+        @include table-cell();
+    }
+    & th{
+        @include table-cell();
+        background-color: $primary;
+        color: #fff;
+        text-transform: capitalize;
+    }
+    @media (max-width: 767px){
+        &, tr, td{
+            width: 98%;
+            margin: 0;
+            display: block;
+            box-sizing: border-box;
+
+        }
+        th{
+            display: none;
+        }
+        tr:nth-child(even){
+            background-color: transparentize($primary, 0.9);
+        }
+        td{
+            position: relative;
+            text-align: right;
+            padding-left: 2rem;
+            &::before{
+                content: attr(data-label);
+                top: 0;
+                left: 0;
+                font-weight: 600;
+                position: absolute;
+                font-size: 0.7rem;
+                color: $primary;
+            }
+            &:hover::after{
+                content: attr(data-label);
+                text-transform: uppercase;
+                position: absolute;
+                padding: .15rem;
+                top: 0;
+                background-color: transparentize($primary, .9);
+                left: 50%;
+                border-radius: 5px;
+                border: .7px solid $primary;
+                // right: .2rem;
+                font-weight: 600;
+                font-size: .8rem;
+            }
+        }
+    }
+}
+
+/* my table */
+
+.table-box{
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    background-color: transparentize($primary, 0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 2rem ;
+    width: 90%;
+    overflow-x: scroll;
+    margin: auto;
+    &-table {
+         width: 100%;
+         position: relative;
+         padding: 0.75rem;
+     }
+    &-title{
+        font-size: 1.5rem;
+        color: white;
+        text-transform: capitalize;
+        border: 1px solid $primary;
+        border-radius: 5px;
+        text-align: center;
+        padding: 0.75rem;
+        margin: auto;
+        text-decoration: underline;
+     }
+}
+
+
+.table-box table td,
+.table-box table th{
+    padding: 12px 15px;
+    border: 1px solid rgb(255, 0, 0);
+    text-align: center;
+    font-size: 16px;
+    background: #ddd;
+    color: black;
+    transition: all 0.5s ease;
+}
+
+.table-box table td:hover{
+    border: 1px solid rgb(255, 0, 0);
+    background: rgb(255, 0, 0);
+    font-weight: bold;
+    color: white;
+}
+.table-box table th{
+    background-color: var(--nav-primary);
+    color: #fff;
+    text-transform: capitalize;
+  }
