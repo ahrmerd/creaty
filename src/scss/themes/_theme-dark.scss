@@ -12,9 +12,10 @@
     --tertiary: #{$tertiary} ;
     --complimentary: #{$complimentary} ;
     --hover: #{$primary-darker};
-    --form: #{$primary-darkest} ;
+    --form: #{transparentize($primary-darkest, 0)} ;
     --focus: #{$primary-dark};
     --link-hover: #{$primary};
     transition: all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86) ;
 
  }
+

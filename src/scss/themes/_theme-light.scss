@@ -12,7 +12,7 @@
     --tertiary: #{$tertiary} ;
     --complimentary: #{$complimentary} ;
     --hover: #{$primary-lighter};
-    --form: #{$primary-lightest} ;
+    --form: #{transparentize($primary-lightest, 0.5)};
     --focus: #{$primary-light};
     --link-hover: #{$primary-dark};
     transition: all 1000ms ease-in-out, color 1000ms ease-in-out;
