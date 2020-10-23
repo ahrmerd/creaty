@@ -14,7 +14,10 @@ body{
    background-color: var(--bg);
    color: var(--text);
 }
-
+.debug{
+   width: 50px;
+   height: 50px;
+}
 
 @import './colors';
 @import '../themes/theme-light';
@@ -23,4 +26,31 @@ body{
 @import '../components/buttons';
 @import '../components/hamburger';
 @import '../components/typography';
-@import '../components/tables.scss';
+@import '../components/tables';
+@import '../components/forms';
+
+$myc: indigo;
+.primary{
+   color: darkn;
+   background-color: $primary;
+}
+.primary-dark{
+   background-color: $primary-dark ;
+}
+.primary-darker{
+   background-color: $primary-darker ;
+}.primary-darkest{
+   background-color: $primary-darkest;
+}
+.primary-light{
+   // background-color: lighten($myc, 50);
+   background-color: $primary-light;
+}
+.primary-lighter{
+   background-color: $primary-lighter;
+}.primary-lightest{
+   background-color: $primary-lightest;
+}
+// body *:not(.debug){
+//    display: none;
+// }
