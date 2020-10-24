@@ -49,5 +49,83 @@
     @include form-input(60%)
 }
 
+.cool-form-box{
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    background-color: var(--form);
+    position: absolute;
+    box-sizing: border-box;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    padding: 2.5rem;
+    text-transform: capitalize;
+    border: 0.75px solid;
+    border-radius: 5px;
+    text-align: center;
+    padding: 0.75rem;
+    margin: 1rem;
+
+}
+.cool-form-item{
+    position: relative;
+}
+
+.cool-form-input{
+    width: 100%;
+    padding: 0.75rem 0.25rem;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    border-top: none;
+    border-bottom: 1px solid ;
+    border-right: none;
+    border-left:none;
+    outline: none;
+}
+.cool-form-label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.75rem 0 ;
+    pointer-events: none ;
+    transition: all 500ms ease;
+}
+
+.cool-form-input:focus{
+    border: 1px solid $primary;
+    border-bottom: 2px solid $primary;
+    box-shadow: 0 25 50px -10px rgba(0, 0, 0, .25);
+}
+.cool-form-input:focus ~ .cool-form-label,
+.cool-form-input:valid ~ .cool-form-label{
+    top: -20px;
+    left: 0;
+    color: $primary;
+    font-size: 0.75rem;
+}
+.cool-form-submit{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #e02424;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    letter-spacing: 4px;
+}
+.cool-form-submit:hover{
+    --pri-color: #e02424;
+    background: var(--pri-color);
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--pri-color),
+              0 0 25px var(--pri-color),
+              0 0 50px var(--pri-color),
+              0 0 100px var(--pri-color);
+}
+
 
 
