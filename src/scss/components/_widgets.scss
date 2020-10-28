@@ -1,0 +1,100 @@
+// switch, tooltips, toast, spinner, progressbar, sliders, pagination, checkboxes
+
+.tooltip{
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted;
+    @mixin tooltip(){
+        visibility: hidden;
+        color: aliceblue;
+        padding: 0.3rem;
+        background-color: rgba($primary, 0.8) ;
+        text-align: center;
+        border-radius: 6px;
+        position: absolute;
+        z-index: 5;
+
+    }
+    &-text{       
+        &-top{
+            @include tooltip();
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &-right{
+            @include tooltip();
+            top: -4px;
+            left: 105%;            
+        }
+        &-bottom{
+            @include tooltip();
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);        
+        }
+        &-left{
+            @include tooltip();
+            top: -4px;
+            right: 105%;
+        }
+    }
+    &:hover &-text-top,&:hover &-text-right,&:hover &-text-bottom,&:hover &-text-left {
+        visibility: visible;
+    }
+    &::after{
+        content: ' ';
+    }
+}
+
+.toast{
+    text-align: center;
+    visibility: hidden;
+    position: absolute;
+    background-color: rgba($primary, 0.5);
+    display: block;
+    padding: 1rem;
+    bottom: 30px;
+    left: 50%;
+    z-index: 10;
+    transform: translateX(-50%);
+    border-radius: 3px;
+
+    &.show{
+        visibility: visible !important;
+        animation: toastfadein 0.5s, toastfadeout 1.5s;
+
+    }
+
+}
+@keyframes toastfadein {
+    from{ bottom: 0; opacity: 0;}
+    from{ bottom: 30px; opacity: 1;}
+}
+@keyframes toastfadeout {
+    from{ bottom: 30px; opacity: 1;}
+    from{ bottom: 0; opacity: 0;}
+}
+
+.spinner{
+
+}
+
+
+.pagination{
+    .pagination-link{
+
+    }
+    .active-link{
+
+    }
+    .inactive-link{
+
+    }
+    .first-link{
+
+    }
+    .last-link{
+
+    }
+}
